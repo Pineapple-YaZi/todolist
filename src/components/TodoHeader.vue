@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <h1>todos</h1>
-    <input id="toggle-all" class="toggle-all" type="checkbox" >
+    <input id="toggle-all" class="toggle-all" type="checkbox" />
     <label for="toggle-all"></label>
     <input
       class="new-todo"
@@ -15,17 +15,18 @@
 
 <script>
 export default {
- methods:{
-   onAdd(){
-     if(this.task==='') return alert('请输入您要执行的任务名~')
-     this.$emit('addTask', this.task)
-     this.task = ''
-   }
- },
- data(){
-   return {
-     task:''
-   }
- }
-}
+  methods: {
+    //  添加数组项
+    onAdd() {
+      if (this.task === "") return alert("请输入您要执行的任务名~");
+      this.$emit("addTask", this.task);
+      this.task = "";
+    },
+  },
+  data() {
+    return {
+      task: "",
+    };
+  },
+};
 </script>

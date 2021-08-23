@@ -2,7 +2,7 @@
   <div class="todoapp">
     <TodoHeader @addTask="onAdd"></TodoHeader>
     <TodoMain :arr="list" @delTask="onDel"></TodoMain>
-    <TodoFooter></TodoFooter>
+    <TodoFooter :arr="list"></TodoFooter>
   </div>
 </template>
 
